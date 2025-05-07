@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>haggle.ai - Your Negotiation Assistant</title>
+    <link rel="icon" href="/static/icon.gif" type="image/gif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="loading-bar"></div>
+
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-comments-dollar"></i>
+                haggle.ai
+            </div>
+            <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                <i class="fas fa-moon dark-icon"></i>
+                <i class="fas fa-sun light-icon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <i class="fas fa-robot"></i>
+                    <span>Your Negotiation Assistant</span>
+                </div>
+                <div class="chat-options">
+                    <button class="option-btn" id="clearChat" title="Clear Chat">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                    </div>
+            </div>
+
+            <div class="chat-body" id="chatBody">
+                </div>
+
+            <div class="chat-footer">
+                <div class="price-compare-toggle tooltip">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="priceToggle" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <span>Enable Price Comparison</span>
+                    <span class="tooltip-text">Automatically search for prices when you ask about product costs</span>
+                </div>
+
+                <div class="chat-input-container">
+                    <textarea
+                        class="chat-input"
+                        id="messageInput"
+                        placeholder="Ask about negotiation strategies, bargaining tips, or check prices..."
+                        rows="1"
+                    ></textarea>
+                    <button class="submit-btn" id="sendButton" title="Send Message">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+
+                <div class="suggestions">
+                    <div class="suggestion-chip">How do I negotiate a car price?</div>
+                    <div class="suggestion-chip">Price of iPhone 15 Pro?</div>
+                    <div class="suggestion-chip">Salary negotiation tips</div>
+                    <div class="suggestion-chip">Help me negotiate rent</div>
+                </div>
+            </div>
+
+            <div class="status-bar">
+                <div class="status-indicator">
+                    <div class="status-dot"></div>
+                    <span>Online</span>
+                </div>
+                <div class="powered-by">
+                    Powered by DeepSeek AI
+                </div>
+            </div>
+        </div>
+
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-comments-dollar"></i>
+                </div>
+                <div class="feature-title">Negotiation Expert</div>
+                <div class="feature-desc">
+                    Get professional advice on bargaining strategies for any situation, from buying a car to negotiating salary.
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-search-dollar"></i>
+                </div>
+                <div class="feature-title">Price Comparison</div>
+                <div class="feature-desc">
+                    Find real-time prices from multiple sources to ensure you're getting the best deal possible.
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="feature-title">Role-Play Practice</div>
+                <div class="feature-desc">
+                    Practice your negotiation skills with our AI before the real deal to build confidence and improve outcomes.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 haggle.ai - Your Negotiation Assistant</p>
+    </footer>
+
+    <div class="welcome-screen" id="welcomeScreen">
+        <div class="welcome-content">
+            <div class="welcome-icon">
+                <i class="fas fa-comments-dollar"></i>
+            </div>
+            <h2 class="welcome-title">Welcome to haggle.ai</h2>
+            <p class="welcome-desc">
+                Your personal negotiation assistant, ready to help you save money and master the art of bargaining.
+                Ask about negotiation tactics, check real-time prices, or practice your skills with our AI.
+            </p>
+            <button class="welcome-btn" id="startButton">Get Started</button>
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
